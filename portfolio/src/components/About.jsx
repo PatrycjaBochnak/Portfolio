@@ -3,9 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
+      <div className=" p-8 flex flex-col justify-center items-center w-full h-full">
+        <div className="max-w-[1000px] pb-8 w-full grid-cols-2 gap-8">
+          <div className="sm:text-right">
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
               About
             </p>
@@ -20,10 +20,13 @@ const About = () => {
           </div>
           <div>
             <p className="sm:text-right">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              porttitor lorem facilisis, ornare tortor eget, blandit leo. Duis
-              consectetur rhoncus est feugiat rutrum. Suspendisse tellus nulla,
-              feugiat eu ullamcorper at, facilisis quis tellus.
+              I am actively seeking my first professional opportunity. I hold an
+              Engineering degree in Dietetics and a Master's degree in IT
+              Project Management, where I began my journey into programming. For
+              the past two years, I have been honing my skills in front-end
+              development. I am passionate about creating intuitive and engaging
+              user experiences, and I am eager to bring my knowledge and
+              enthusiasm to a dynamic team.
             </p>
           </div>
         </div>
