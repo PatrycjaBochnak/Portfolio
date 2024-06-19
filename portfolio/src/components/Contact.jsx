@@ -1,10 +1,11 @@
 import React from "react";
 
 const Contact = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div
       name="contact"
-      className="w-full h-screen p-8 bg-[#0a192f] flex justify-center items-center p-4"
+      className="w-full h-screen p-8 bg-[rgb(10,25,47)] flex justify-center items-center"
     >
       <form
         method="POST"
