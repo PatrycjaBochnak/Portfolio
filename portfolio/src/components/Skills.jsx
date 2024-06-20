@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import html from "../assets/html.svg";
 import css from "../assets/css.svg";
 import bootstrap from "../assets/bootstrap.svg";
@@ -11,19 +11,32 @@ import react from "../assets/react.svg";
 import typescript from "../assets/typescript.svg";
 import tailwind from "../assets/tailwind.svg";
 
-const Skills = () => {
+const Skills = ({ sr }) => {
+  useEffect(() => {
+    sr.reveal("#text", { origin: "top" });
+    sr.reveal("#text-2", { delay: 1400, origin: "bottom" });
+    sr.reveal("#content", { delay: 2000, origin: "top" });
+  }, [sr]);
   return (
-    <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300">
+    <div
+      id="skills"
+      name="skills"
+      className="w-full h-screen bg-[#0a192f] text-gray-300"
+    >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-full">
         <div className="sm:mt-10">
-          <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-            {" "}
-            Skills{" "}
+          <p
+            id="text"
+            className="text-4xl font-bold inline border-b-4 border-pink-600"
+          >
+            Skills
           </p>
-          <p className="py-4">These are the technologies I've worked with</p>
+          <p id="text-2" className="py-4">
+            These are the technologies I've worked with
+          </p>
         </div>
-        <div className="w-full overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8">
+        <div id="content" className="w-full overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8">
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={html} alt="HTML"></img>
             <p className="my-4">HTML</p>

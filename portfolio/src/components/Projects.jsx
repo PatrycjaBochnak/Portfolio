@@ -1,26 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
 import photo from "../assets/photo.png";
 
-const Projects = () => {
+const Projects = ({sr}) => {
+  useEffect(() => {
+    sr.reveal("#text", { origin: "top" });
+    sr.reveal("#text-2", { delay: 1400, origin: "bottom" });
+    sr.reveal("#content", { delay: 2000, origin: "top" });
+  }, [sr]);
   return (
     <div
+    id="projects"
       name="projects"
       className="w-full h-screen p-8 text-gray-300 bg-[#0a192f]"
     >
       <div className="max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-4">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
+          <p id="text" className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Projects
           </p>
-          <p className="py-4">Check out my recent projects</p>
+          <p id="content" className="py-4">Check out my recent projects</p>
         </div>
 
         {/* Container */}
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto ">
+        <div id="content-2" className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto ">
           {/* Grid Item */}
 
-          <div
+          <div 
             style={{ backgroundImage: `url(${photo})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
           >
