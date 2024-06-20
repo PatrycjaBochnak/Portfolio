@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import ScrollReveal from "scrollreveal";
-import "./index.css"
+import "./index.css";
 
 const sr = ScrollReveal({
   distance: "65px",

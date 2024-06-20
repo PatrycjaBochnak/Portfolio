@@ -13,10 +13,13 @@ import tailwind from "../assets/tailwind.svg";
 
 const Skills = ({ sr }) => {
   useEffect(() => {
-    sr.reveal("#text", { origin: "top" });
-    sr.reveal("#text-2", { delay: 1400, origin: "bottom" });
-    sr.reveal("#content", { delay: 2000, origin: "top" });
+    if (sr) {
+      sr.reveal("#text", { origin: "top" });
+      sr.reveal("#text-2", { delay: 1400, origin: "bottom" });
+      sr.reveal("#content", { delay: 2000, origin: "top" });
+    }
   }, [sr]);
+
   return (
     <div
       id="skills"
@@ -36,21 +39,24 @@ const Skills = ({ sr }) => {
             These are the technologies I've worked with
           </p>
         </div>
-        <div id="content" className="w-full overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8">
+        <div
+          id="content"
+          className="w-full overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8"
+        >
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={html} alt="HTML"></img>
             <p className="my-4">HTML</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={css} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={css} alt="CSS"></img>
             <p className="my-4">CSS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={javascript} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={javascript} alt="JavaScript"></img>
             <p className="my-4">JAVASCRIPT</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={react} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={react} alt="React"></img>
             <p className="my-4">REACT JS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
@@ -58,12 +64,12 @@ const Skills = ({ sr }) => {
               style={{ marginTop: "12px" }}
               className="w-20 mx-auto"
               src={typescript}
-              alt="HTML"
+              alt="TypeScript"
             ></img>
             <p className="my-4">TYPESCRIPT</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={nodejs} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={nodejs} alt="Node.js"></img>
             <p className="my-4">NODE JS</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
@@ -71,7 +77,7 @@ const Skills = ({ sr }) => {
               style={{ marginTop: "60px" }}
               className="w-20 mx-auto"
               src={express}
-              alt="HTML"
+              alt="Express.js"
             ></img>
             <p className="my-4">EXPRESS JS</p>
           </div>
@@ -80,12 +86,12 @@ const Skills = ({ sr }) => {
               style={{ marginTop: "6px" }}
               className="w-20 mx-auto"
               src={mongodb}
-              alt="HTML"
+              alt="MongoDB"
             ></img>
             <p className="my-4">MONGO DB</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={bootstrap} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={bootstrap} alt="Bootstrap"></img>
             <p style={{ marginTop: "23px" }} className="my-4">
               BOOTSTRAP
             </p>
@@ -95,12 +101,12 @@ const Skills = ({ sr }) => {
               style={{ marginTop: "37px" }}
               className="w-20 mx-auto"
               src={tailwind}
-              alt="HTML"
+              alt="Tailwind"
             ></img>
             <p className="my-4">TAILWIND</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={github} alt="HTML"></img>
+            <img className="w-20 mx-auto" src={github} alt="GitHub"></img>
             <p className="my-4">GITHUB</p>
           </div>
         </div>

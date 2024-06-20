@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -8,8 +8,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App({ sr }) {
-  useEffect(() => {}, [sr]);
-
   return (
     <div>
       <Navbar />
@@ -17,7 +15,7 @@ function App({ sr }) {
       <About id="about" sr={sr} />
       <Skills id="skills" sr={sr} />
       <Projects id="projects" sr={sr} />
-      <Contact id="skills" sr={sr} />
+      <Contact id="contact" sr={sr} />
       <Footer />
     </div>
   );
