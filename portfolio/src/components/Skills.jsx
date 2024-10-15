@@ -13,11 +13,9 @@ import tailwind from "../assets/tailwind.svg";
 
 const Skills = ({ sr }) => {
   useEffect(() => {
-    if (sr) {
       sr.reveal("#text", { origin: "top" });
       sr.reveal("#text-2", { delay: 1400, origin: "bottom" });
       sr.reveal("#content", { delay: 2000, origin: "top" });
-    }
   }, [sr]);
 
   return (
