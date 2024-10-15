@@ -33,13 +33,16 @@ const About = ({ sr }) => {
           </div>
           <div>
             <p id="content-2" className="sm:text-right">
-              I am actively seeking my first professional opportunity. I hold an
-              Engineering degree in Dietetics and a Master's degree in IT
-              Project Management, where I began my journey into programming. For
-              the past two years, I have been honing my skills in front-end
-              development. I am passionate about creating intuitive and engaging
-              user experiences, and I am eager to bring my knowledge and
-              enthusiasm to a dynamic team.
+              I am actively seeking my first professional opportunity in the
+              tech industry. I hold a Bachelor’s degree in Dietetics and a
+              Master’s degree in IT Project Management, where I discovered my
+              passion for programming. Over the past two years, I have dedicated
+              myself to honing my skills in front-end development, focusing on
+              creating intuitive and engaging user experiences. I am
+              particularly interested in collaborating with a dynamic team where
+              I can contribute my knowledge, enthusiasm, and a unique
+              perspective from my diverse background. I am eager to embrace new
+              challenges and grow as a developer.
             </p>
           </div>
         </div>
