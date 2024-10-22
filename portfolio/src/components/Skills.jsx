@@ -39,7 +39,7 @@ const Skills = ({ sr }) => {
         </div>
         <div
           id="content"
-          className="w-full overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8"
+          className="w-full h-screen overflow-y-auto grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8"
         >
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={html} alt="HTML"></img>

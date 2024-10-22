@@ -4,17 +4,23 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 
+const FILE_URL = "https://localhost:3000/PATRYCJABOCHNAK.pdf";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-  const handleDownload = () => {
-    const fileUrl = "../assets/PATRYCJABOCHNAK.pdf";
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.setAttribute("download", true);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = (url) => {
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const fileName = url.split("/").pop();
+        const aTag = document.createElement("a");
+        aTag.href = blobURL;
+        aTag.setAttribute("download", fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+      });
   };
 
   return (
@@ -37,19 +43,21 @@ const Navbar = () => {
         <div onClick={handleClick}>{!nav ? <FaBars /> : <FaTimes />}</div>
         {nav && (
           <ul className="absolute top-16 left-0 w-full bg-[#0a192f] flex flex-col items-center">
-            {["home", "about", "skills", "projects", "contact"].map((section) => (
-              <li key={section} className="py-4">
-                <Link
-                  onClick={handleClick}
-                  to={section}
-                  smooth={true}
-                  duration={500}
-                  offset={-50}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </Link>
-              </li>
-            ))}
+            {["home", "about", "skills", "projects", "contact"].map(
+              (section) => (
+                <li key={section} className="py-4">
+                  <Link
+                    onClick={handleClick}
+                    to={section}
+                    smooth={true}
+                    duration={500}
+                    offset={-50}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         )}
       </div>
@@ -83,7 +91,9 @@ const Navbar = () => {
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-600">
             <button
-              onClick={handleDownload}
+              onClick={() => {
+                handleDownload(FILE_URL);
+              }}
               className="flex justify-between items-center w-full text-gray-300"
             >
               CV <BsFillPersonLinesFill size={30} />
