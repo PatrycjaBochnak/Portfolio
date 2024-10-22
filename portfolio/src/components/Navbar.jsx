@@ -4,13 +4,17 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 
-const FILE_URL = "https://localhost:3000/PATRYCJABOCHNAK.pdf";
+const FILE_URL = "http://localhost:3000/files/PATRYCJABOCHNAK.pdf";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const handleDownload = (url) => {
     fetch(url)
-      .then((response) => response.blob())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Load failed");
+        }
+        response.blob()})
       .then((blob) => {
         const blobURL = window.URL.createObjectURL(new Blob([blob]));
         const fileName = url.split("/").pop();
@@ -91,9 +95,7 @@ const Navbar = () => {
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-600">
             <button
-              onClick={() => {
-                handleDownload(FILE_URL);
-              }}
+              onClick={() => handleDownload(FILE_URL)}
               className="flex justify-between items-center w-full text-gray-300"
             >
               CV <BsFillPersonLinesFill size={30} />
