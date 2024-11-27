@@ -44,6 +44,9 @@ const About = ({ sr }) => {
               perspective from my diverse background. I am eager to embrace new
               challenges and grow as a developer.
             </p>
+            {/* <p>
+            I started my programming adventure with the MMC School series of web development courses. I then learned HTML, CSS and JavaScript. After a year of self-study, I enrolled in a part-time online degree programme in Computer Science. Further down the line, I started developing my projects mainly in Next.js technology. As of today, I am working on developing my current projects and developing my competences towards mobile application development (React Native), while this semester I will have the opportunity to learn how to create a backend using the .NET platform.
+            </p> */}
           </div>
         </div>
       </div>
