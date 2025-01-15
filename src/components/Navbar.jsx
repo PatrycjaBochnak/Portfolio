@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="md:hidden">
         <div onClick={handleClick}>{!nav ? <FaBars /> : <FaTimes />}</div>
         {nav && (
-          <ul className="absolute top-16 left-0 w-full bg-[#0a192f] flex flex-col items-center">
+          <ul className="fixed bg-black z-50 opacity-100 top-16 left-0 w-full flex flex-col items-center">
             {["home", "about", "skills", "projects", "contact"].map(
               (section) => (
                 <li key={section} className="py-4">
