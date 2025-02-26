@@ -52,7 +52,7 @@ const Projects = ({ sr }) => {
                     Demo
                   </button>
                 </a>
-                <a href="https://github.com/PatrycjaBochnak/ATuFit">
+                <a href="https://atufit-frontend-6bf4b5f39d4a.herokuapp.com">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Code
                   </button>
@@ -77,7 +77,7 @@ const Projects = ({ sr }) => {
                     Demo
                   </button>
                 </a>
-                <a href="https://github.com/PatrycjaBochnak/What-happened-that-day">
+                <a href="https://what-happened-on-that-day-app-ad5f5b66226e.herokuapp.com">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Code
                   </button>
@@ -125,7 +125,7 @@ const Projects = ({ sr }) => {
                     Demo
                   </button>
                 </a>
-                <a href="https://github.com/PatrycjaBochnak/Pomodoro-technique-app">
+                <a href="https://pomodoro-technique-app-4e85bc813558.herokuapp.com">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Code
                   </button>
